@@ -17,6 +17,18 @@
         "command": "Microcks.helloWorld",
         "title": "Hello World"
       }
+    ], 
+    "colors": [
+      {
+        "id" : "superstatus.error", 
+        "description": "Color for error messages in the status bar", 
+        "defaults": {
+          "dark" : "#FFEA00", 
+          "light": "errorForeground", 
+          "highContrast": "#FFEA00", 
+          "highContrastLight": "#feedc3"
+        }
+      }
     ]
   },
   "scripts": {
@@ -36,5 +48,14 @@
     "typescript": "^5.9.3",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2"
-  }
+  }, 
+  "viewsContainers": {
+  "activitybar": [
+    {
+      "id": "pulseapi",
+      "title": "PulseAPI",
+      "icon": "media/icon.svg"
+    }
+  ]
+}
 }
