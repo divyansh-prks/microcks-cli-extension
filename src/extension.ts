@@ -24,6 +24,8 @@ export function activate(context: vscode.ExtensionContext) {
         {
           enableScripts: true,
         },
+
+        
       );
     
       // Display a message box to the user
@@ -32,6 +34,46 @@ export function activate(context: vscode.ExtensionContext) {
     <body>
       <h1>Hello Pulse API</h1>
       <p> I have setuped the most important thing here </p> 
+       <br>
+       <div class="main" data-vscode-context='{"webviewSection": "main", "mouseCount": 4}'>
+  <h1>Cat Coding</h1>
+
+    <h2>Pulse API</h2>
+
+  <input
+    type="text"
+    id="url"
+    placeholder="Enter URL"
+    style="width: 400px;"
+  />
+
+  <button onclick="sendRequest()">
+    Send
+  </button>
+
+  <pre id="result"></pre>
+  <textarea data-vscode-context='{"webviewSection": "editor", "preventDefaultContextMenuItems": true}'></textarea>
+      <form action="/action_page.php">
+  <label for="fname">Request Url:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Payload:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+ 
+<script>
+
+function sendRequest() {
+
+const url =
+  document.getElementById('url').value;
+
+alert(url);
+const name = "divyansh"
+
+}
+
+</script>
     </body>
   </html>`;
 
@@ -41,6 +83,5 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(disposable);
 }
 
-// This method is called when your extension is deactivated
 
 export function deactivate() {}
